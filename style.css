@@ -1,0 +1,118 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: antiquewhite;
+    font-family: sans-serif;
+}
+
+button{
+    cursor: pointer;
+}
+
+.container {
+    border-radius: 15px;
+    background-color: #000100;
+    padding: 10px 5px;
+    width: 250px;
+    height: 420px;
+}
+.content{
+    position: relative;
+    border-bottom: 1px solid#3b3a3d;
+}
+
+.content img{
+    filter: invert(1);
+    width: 20px;
+    opacity: 0.25;
+}
+.content button{
+    right: 5px;
+    bottom: 0;
+    border: none;
+    outline: none;
+    background-color: #000100;
+    position: absolute;
+}
+
+.numpad {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.numpad>div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.display {
+    color: white;
+    height: 80px;
+    width: 100%;
+    font-size: 24px;
+    padding: 5px;
+    overflow: auto;
+    margin-bottom: 10px;
+    scrollbar-width: none;
+}
+.display::-webkit-scrollbar {
+    display: none;
+}
+
+.display .input{
+    margin-bottom: 8px;
+    color: #aac8ed;
+}
+
+.display .output{
+    color: #9c3a61;
+}
+.numpad button {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+}
+
+.numbers,
+.clear,
+.decimal,
+.operation,
+.extra-operation {
+
+    background-color: #0f1316;
+    font-size: 24px;
+}
+
+.operation {
+    color: #d798b0;
+}
+
+.numbers,
+.extra-operation,
+.decimal {
+    color: #aac8ed;
+}
+
+.equal {
+    color: white;
+    background-color: #9c3a61;
+    font-size: 30px;
+}
+
+.clear {
+    color: #da322b;
+}
