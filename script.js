@@ -62,7 +62,10 @@ function removeLastCharacter(){
 
 function calculateResult(){
     try{
-        const result = eval(expression);
+        let result = eval(expression);
+        if(result % 1 !==0){
+            result=Number(result.toFixed(6));
+        }
         expression = result.toString();
         updateDisplay();
 
