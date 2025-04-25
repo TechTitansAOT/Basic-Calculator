@@ -15,7 +15,13 @@ body {
 
 button{
     cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
 }
+
+button:active {
+      background-color: #99CCFF;
+      transform: scale(0.97);
+    }
 
 .container {
     border-radius: 15px;
