@@ -1,5 +1,5 @@
-const display = document.getElementById("display");
-const buttons = document.querySelectorAll("button");
+const display = document.querySelector('.input');
+const buttons = document.querySelectorAll('button');
 
 let expression = '';
 buttons.forEach(button =>{
@@ -35,11 +35,16 @@ function addToExpression(value){
 
     const ops ={
         '+': '+',
+        '−': '-',
         '-': '-',
+        '×': '*',
         '*': '*',
+        '÷': '/',
         '/': '/',
+        '%': '/100',
         '(': '(',
         ')': ')'
+
     };
     expression+= ops[value] || value; 
     updateDisplay();
@@ -58,7 +63,7 @@ function removeLastCharacter(){
 function calculateResult(){
     try{
         const result = eval(expression);
-        expression = result.string();
+        expression = result.toString();
         updateDisplay();
 
     } catch(error){
